@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title><%= full_title(yield(:title)) %></title>
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+  <meta name="keywords" content="3d модели, 3d принтер, 3d, печать на 3d принтере, .STL, .SCAD, 3d модели скачать, бесплатные 3d модели, 3d модель человека, форматы 3d моделей" />
+  <meta name="description" content="3d модели для 3D принтеров. Бесплатные и платные модели с регистрацией." />
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8" /> 
+
+</head>
+<body>
+
+	<%= render 'static_pages/header' %>
+	<%= yield %>
+	<%= render 'static_pages/footer' %>
+
+</body>
+</html>
