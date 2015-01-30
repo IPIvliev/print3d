@@ -1,15 +1,16 @@
 <link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700|Open+Sans:400,600,700|Shadows+Into+Light' rel='stylesheet' type='text/css'>
 <link href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.css" rel="stylesheet">
 
+<!-- Scripts are placed here -->
+<script src="http://www.123dapp.com/builds/base.master.libs.script-e9b4b029040427794e0e2dd514d822d2.js"></script>
+
+
+
+
+
 <div id="NavBar" class="navbar-wrap">
   <nav class="navbar navbar-default" role="navigation">
     <div class="navbar-header">
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
       <a class="navbar-brand" href="/">
         <img src="http://cdn.123dapp.com/wp/wp-content/uploads/2014/05/logo-123d.png" alt="Autodesk 123D" alt="Autodesk 123D" class="img-responsive" />
       </a>
@@ -17,19 +18,15 @@
     <div class="collapse navbar-collapse navbar-ex1-collapse">
       <ul class="nav navbar-nav">
         <li class="first has-subnav">
-          <a href="/create" id="track-header-apps">
+          <a href="/">
             Главная
           </a>
         </li>
         <li class="has-subnav">
-          <a href="/gallery" id="track-header-explore">
-            Каталог 3D моделей
-          </a>
+          <%= link_to "Каталог 3D моделей", models_path %>
         </li>
         <li>
-          <a href="http://blog.123dapp.com" id="track-header-blog">
-            Блог
-          </a>
+          <%= link_to "Блог", articles_path %>
         </li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
