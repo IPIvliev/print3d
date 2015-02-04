@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @user.name %>
+</p>
+
+<p>
+  <b>Avatar:</b>
+  <%= @user.avatar %>
+</p>
+
+<p>
+  <b>Pocket:</b>
+  <%= @user.pocket %>
+</p>
+
+<p>
+  <b>Sent:</b>
+  <%= @user.sent %>
+</p>
+
+
+<%= link_to 'Edit', edit_user_path(@user) %> |
+<%= link_to 'Back', users_path %>

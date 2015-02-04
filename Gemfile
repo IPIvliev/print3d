@@ -19,10 +19,10 @@ gem 'thin'
 # gem 'delayed_job_active_record'
 
 # Users
-# gem 'devise'
-# gem 'omniauth'
-# gem 'omniauth-facebook'
-# gem 'omniauth-vkontakte'
+ gem 'devise'
+ gem 'omniauth'
+ gem 'omniauth-facebook'
+ gem 'omniauth-vkontakte'
 # gem 'ransack'
 
 # Money

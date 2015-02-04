@@ -1,0 +1,133 @@
+<!-- WRAPPER -->
+<div id="wrapper">
+
+  <div id="shop">
+
+    <!-- PAGE TITLE -->
+    <header id="page-title">
+      <div class="container">
+        <h1>Регистрация</h1>
+
+        <ul class="breadcrumb">
+          <li><a href="index.html">Главная</a></li>
+          <li class="active">Регистрация</li>
+        </ul>
+      </div>
+    </header>
+
+
+    <section class="container">
+
+      <div class="row">
+
+        <!-- REGISTER -->
+        <div class="col-md-6">
+
+          <h2>Создать <strong>Аккаунт</strong></h2>
+
+          <%= form_for(resource, as: resource_name, url: registration_path(resource_name), :html => {:class => "white-row"}) do |f| %>
+
+              <!-- alert failed -->
+              <%= devise_error_messages! %>
+
+              <% flash.each do |key, value| %>
+                  <%= content_tag(:div, value, class: "alert alert-#{key}") %>
+              <% end %>
+
+              <div class="row">
+                <div class="form-group">
+                  <div class="col-md-12">
+                    <label>Ваш E-mail</label>
+                    <%= f.email_field :email, autofocus: true, :class => "form-control" %>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="form-group">
+                  <div class="col-md-6">
+                    <label>Пароль</label>
+                    <%= f.password_field :password, autocomplete: "off", :class => "form-control" %>
+                  </div>
+                  <div class="col-md-6">
+                    <label>Повторите пароль</label>
+                    <%= f.password_field :password_confirmation, autocomplete: "off", :class => "form-control" %>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="form-group">
+                  <div class="col-md-6">
+                    <label>Вы промоутер или работодатель?</label>
+                    <div class="radio">
+                      <%= f.radio_button(:status, "promo", :checked => (params[:status] == "promo")) %>
+                      <%= f.label(:status, "Промоутер") %>
+                    </div>
+                    <div class="radio">
+                      <%= f.radio_button(:status, "agent", :checked => (params[:status] == "agent")) %>
+                      <%= f.label(:status, "Работодатель") %>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-12">
+                  <p>Регистрируясь на сайте вы потверждайте, что ознакомились с условиями <a href="/public-offer.html" target="_blank">пользовательского соглашения</a> и принимайте их в полном объёме.</p>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-12">
+                  <input type="submit" value="Зарегистрироваться" class="btn btn-primary pull-right push-bottom" data-loading-text="Loading...">
+                </div>
+              </div>
+              <br>
+              <p>Вы можете использовать Facebook и Вконтакте для регистрации на сайте</p>
+
+
+          <% end %>
+
+        </div>
+        <!-- /REGISTER -->
+
+        <!-- WHY? -->
+        <div class="col-md-6">
+
+          <h2>Зачем нужно регистрироваться?</h2>
+
+          <div class="white-row">
+
+            <h4>Регистрация быстрая, простая и бесплатная :)</h4>
+
+            <p>Зарегистрировавшись вы сможете:</p>
+            <ul class="list-icon check">
+              <li>Заполнить анкету.</li>
+              <li>Разместить ваши данные в базе промоутеров.</li>
+              <li>Просматривать телефоны промоутеров.</li>
+              <li>Использовать базу вакансий.</li>
+            </ul>
+
+            <hr class="half-margins" />
+
+            <p>
+              У вас уже есть аккаунт?
+              <a href="/users/sign_in.html">Войдите на сайт</a>
+            </p>
+          </div>
+
+          <div class="white-row">
+            <h4>У вас есть вопросы?</h4>
+            <p>
+              Если у вас имеются вопросы относительно использования нашего сервиса <a href="#" data-toggle="modal" data-target="#letter">свяжитесь с нами</a>.
+            </p>
+          </div>
+
+        </div>
+        <!-- /WHY? -->
+
+      </div>
+
+    </section>
+
+  </div>
+</div>
+<!-- /WRAPPER -->

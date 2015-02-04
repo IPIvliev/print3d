@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  name: MyString
+  avatar: MyString
+  pocket: 9.99
+  sent: false
+
+two:
+  name: MyString
+  avatar: MyString
+  pocket: 9.99
+  sent: false
