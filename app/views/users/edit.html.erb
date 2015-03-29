@@ -1,6 +1,68 @@
-<h1>Editing user</h1>
+<%= render "profile_start" %>
 
-<%= render 'form' %>
+<%= render "/users/profile/top_menu" %>
 
-<%= link_to 'Show', @user %> |
-<%= link_to 'Back', users_path %>
+        <div class="panel-body">
+          <form role="form" action="profile" method="post" enctype="multipart/form-data" id="editForm">
+            <div class="row">
+              <div class="col-lg-4">
+                <h3 class="mb-30">Account information</h3>
+                <div class="form-group">
+                  <label for="exampleInputEmail1">Your name</label>
+                  <input type="text" placeholder="Kirill Belov" name="initialName" id="initialName" class="form-control" value="Kirill Belov">
+                </div>
+                <div class="form-group">
+                  <label for="exampleInputEmail1">Autodesk 123D name</label>
+                  <input type="text" placeholder="Kirill Belov 234" name="adskName" id="adskName" class="form-control" value="Kirill Belov 234">
+                </div>
+                <div class="form-group">
+                  <label for="exampleInputPassword1">Password</label>
+                  <input type="password" disabled="" placeholder="••••••••" id="exampleInputPassword1" class="form-control">
+                  <span class="help-block"><small>To change your password or email address you'll need to login into your <a href="https://accounts.autodesk.com/">autodesk account</a>.</small></span></div>
+              </div>
+              <div class="col-lg-4">
+                <h3 class="mb-30">A little about yourself</h3>
+                <div class="form-group">
+                  <label for="exampleInputFile">Profile picture</label>
+                  <input type="file" id="profilePicture" name="profilePicture">
+                  <p class="help-block"><small>Image cannot exceed 5MB.</small></p>
+                </div>
+                <div class="form-group">
+                  <label for="exampleInputEmail1">Location</label>
+                  <input type="text" placeholder="" name="location" id="location" class="form-control" value="">
+                </div>
+                <div class="form-group">
+                  <label for="exampleInputPassword1">A few words about yourself</label>
+                  <textarea rows="3" class="form-control" name="aboutMe" placeholder="" id="aboutMe"></textarea>
+                </div>
+              </div>
+              <div class="col-lg-4">
+                <h3 class="mb-30">Social information</h3>
+                <div class="form-group">
+                  <label for="exampleInputEmail1">Personal website(s)</label>
+                  <input type="url" placeholder="allpromoters.ru" name="personalURL" id="personalURL" class="form-control" value="allpromoters.ru">
+                </div>
+                <div class="form-group">
+                  <label for="exampleInputEmail1">Facebook</label>
+                  <input type="url" placeholder="" name="facebookURL" id="facebookURL" class="form-control" value="">
+                  <span class="help-block"><small>E.g. http://facebook.com/johndoe</small></span></div>
+                <div class="form-group">
+                  <label for="exampleInputEmail1">Twitter</label>
+                  <input type="url" placeholder="" name="twitterURL" id="twitterURL" class="form-control" value="">
+                  <span class="help-block"><small>E.g. http://twitter.com/johndoe</small></span></div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-lg-12">
+                <hr>
+                <input type="hidden" name="modifiedFields" id="modifiedFields">
+                <button class="btn btn-primary btn-lg editForm" type="submit">Update changes</button>
+              </div>
+            </div>
+          </form>
+        </div>
+
+</div>
+</div>
+</div>
+</div>

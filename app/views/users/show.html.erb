@@ -1,25 +1,62 @@
-<p id="notice"><%= notice %></p>
+<%= render "profile_start" %>
 
-<p>
-  <b>Name:</b>
-  <%= @user.name %>
-</p>
+<%= render "/users/profile/top_menu" %>
 
-<p>
-  <b>Avatar:</b>
-  <%= @user.avatar %>
-</p>
+        <div class="panel-body">
+          <div class="row">
+            <div class="col-sm-12 col-md-12 col-lg-4">
+              <h3 class="mb-15">Membership level</h3>
+              <div class="panel panel-default">
+                <div class="panel-body text-center">
+                  <p><strong>Free Membership *</strong></p>
+                  <p class="mb-0 text-muted"><small>Non-commercial use. For details, see <a href="http://www.123Dapp.com/EULA">123D Terms of Service</a>.</small></p>
 
-<p>
-  <b>Pocket:</b>
-  <%= @user.pocket %>
-</p>
+                </div>
+              </div>
+            </div>
+            <hr class="hidden-lg">
+            <div class="col-sm-12 col-md-12 col-lg-4">
+              <h3 class="mb-15">Premium downloads</h3>
+              <div class="panel panel-default">
+                <div class="panel-body text-center">
 
-<p>
-  <b>Sent:</b>
-  <%= @user.sent %>
-</p>
+                  <p class="mb-0"><strong>0 of 10 downloads used</strong></p>
+                  <div class="progress">
+                    <div class="progress-bar progress-bar-success" style="width: 0%"> <span class="sr-only">50% used</span></div>
+                  </div>
+                  <p class="mb-0 text-muted"><small><a href="/gopremium">Become a premium member</a> to remove download limit.</small></p>
 
+                </div>
+              </div>
+            </div>
+            <hr class="hidden-lg">
+            <div class="col-sm-12 col-md-12 col-lg-4">
+              <h3 class="mb-15">Cloud storage <span class="label label-success">New!</span></h3>
+              <div class="panel panel-default">
+                <div class="panel-body text-center">
+                  <p class="mb-0"><span style="font-size: 100px; line-height: 44px;">∞</span></p>
+                  <p class="text-muted mb-0"><small><span class="glyphicon glyphicon-ok"></span> <strong>Unlimited</strong> public storage<br>
+                    <span class="glyphicon glyphicon-ok"></span> <strong>Unlimited</strong> private storage</small></p>
+                </div>
+              </div>
+            </div>
+          </div>
 
-<%= link_to 'Edit', edit_user_path(@user) %> |
-<%= link_to 'Back', users_path %>
+          <hr class="mt-15 mb-30">
+          <div class="alert alert-info mt-30 mb-0">
+            <button type="button" class="close" aria-hidden="true">×</button>
+            <h4 class="mt-0"><span class="glyphicon glyphicon-star"></span> Безлимитный доступ!</h4>
+            <p>Приобретите безлимит сейчас и скачивайте модели без ограничений. <a href="/gopremium" target="_blank">Узнайте больше!</a></p>
+            <p>
+              <a class="btn btn-primary btn-sm mt-15" href="/gopremium">
+                Приобрести безлитимный доступ
+              </a>
+            </p>
+          </div>
+
+        </div>
+
+</div>
+</div>
+</div>
+</div>

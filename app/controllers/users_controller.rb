@@ -1,11 +1,15 @@
 class UsersController < ApplicationController
-  before_filter :set_user, only: [:show, :edit, :update, :destroy]
+  before_filter :set_user, only: [:show, :edit, :update, :billing, :destroy]
 
   respond_to :html
 
   def index
     @users = User.all
     respond_with(@users)
+  end
+
+  def billing
+    respond_with(@user)
   end
 
   def show

@@ -26,16 +26,51 @@
         </li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
-        <li>
-          <a class="MenuGuest" href="/gopremium" rel="nofollow">
-            Зарегистрироваться
-          </a>
-        </li>
-        <li>
-          <a class="MenuGuest MenuLogin" href="/login">
-            Войти
-          </a>
-        </li>
+        <% if current_user %>
+            <li class="MenuGoPremium">
+              <a href="/gopremium" id="track-header-gopremium">
+                Безлимитный доступ
+              </a>
+            </li>
+
+            <li class="has-subnav navitem-account MenuMember" ">
+            <%= link_to "<img class='avatar MenuAvatarImage' alt='' src='/images/default_avatar.png'/>
+              <span class='navitem-messages'> Аккаунт</span>".html_safe, user_path(current_user), :class => "avatar-link MenuAvatar MenuAccountLink", :rel => "nofollow" %>
+            <div class="dropdown-menu dropdown-menu-account">
+              <ul class="sub-nav">
+                <li>
+                  <%= link_to "<span class='glyphicon glyphicon-user'></span> Мой профайл".html_safe, user_path(current_user), :class => "MenuAccountLink", :rel => "nofollow" %>
+                </li>
+                <li>
+                  <a class="MenuAccountLink" href="/MyCorner/@member-info@/downloads" rel="nofollow">
+                    <span class="glyphicon glyphicon-bullhorn"></span>
+                    Скаченный модели
+                  </a>
+                </li>
+                <li class="divider"></li>
+                <li class="MenuGoPremium">
+                  <a href="/gopremium" id="track-header-gopremium">
+                    Безлимитный доступ
+                  </a>
+                </li>
+                <li>
+                  <%= link_to "Выйти", destroy_user_session_path, :method => :delete, :class => "MenuLogout", :id => "logout", :rel => "nofollow" %>
+                </li>
+              </ul>
+            </div>
+            </li>
+
+
+
+        <% else %>
+            <li>
+              <%= link_to "Зарегистрироваться", new_user_registration_path, :class => "MenuGuest", :rel => "nofollow" %>
+            </li>
+            <li>
+              <%= link_to "Войти", new_user_session_path, :class => "MenuGuest MenuLogin", :rel => "nofollow" %>
+            </li>
+        <% end %>
+
       </ul>
     </div>
     <!-- /.navbar-collapse -->

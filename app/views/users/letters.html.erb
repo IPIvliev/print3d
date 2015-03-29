@@ -1,0 +1,60 @@
+<%= render "profile_start" %>
+
+<!-- Content navigation -->
+<div class="panel-heading pb-0">
+  <ul class="nav nav-tabs">
+    <li><%= link_to "Профайл", user_path(current_user) %></li>
+    <li ><%= link_to "Изменить профайл", edit_user_path(current_user) %></li>
+    <li class="active"><%= link_to "Ваши подписки", "/letters" %></li>
+    <li ><a href="billing">Безлимитный доступ</a></li>
+  </ul>
+</div>
+<!-- Content navigation -->
+
+<div class="panel-body">
+  <div class="row">
+    <div class="col-lg-12">
+      <h3 class="mb-30">Email preferences</h3>
+      <p>When do you want to receive notifications of  <strong>messages, follows, comments</strong>, etc?</p>
+      <div class="form-group">
+        <div class="btn-group notification">
+          <button class="btn btn-default preferenceButton " type="button" id="not_1">Immediately</button>
+          <button class="btn btn-default preferenceButton " type="button" id="not_2">Hourly</button>
+          <button class="btn btn-default preferenceButton active" type="button" id="not_3">Daily</button>
+          <button class="btn btn-default preferenceButton " type="button" id="not_4">Weekly</button>
+          <button class="btn btn-default preferenceButton " type="button" id="not_0">Never</button>
+        </div>
+      </div>
+      <p>When should we send the <strong>Autodesk 123D Newsletter</strong>?</p>
+      <div class="form-group">
+        <div class="btn-group adsk123d">
+          <button class="btn btn-default preferenceButton " type="button" id="adsk123d_1">Occasionally</button>
+          <button class="btn btn-default preferenceButton active" type="button" id="adsk123d_0">Never</button>
+        </div>
+      </div>
+      <p>When should we send the <strong>Autodesk 123D Artist Newsletter</strong>?</p>
+      <div class="form-group">
+        <div class="btn-group adsk123dArtist">
+          <button class="btn btn-default preferenceButton " type="button" id="adsk123dArtist_1">Occasionally</button>
+          <button class="btn btn-default preferenceButton active" type="button" id="adsk123dArtist_0">Never</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-lg-12">
+      <hr>
+      <button class="btn btn-primary btn-lg updatePreferences" type="submit">Update changes</button>
+    </div>
+  </div>
+  <form action="preferences" method="post" id="preferenceForm">
+    <input type="hidden" name="notification" id="notification" value="3">
+    <input type="hidden" name="adsk123d" id="adsk123d" value="0">
+    <input type="hidden" name="adsk123dArtist" id="adsk123dArtist" value="0">
+  </form>
+</div>
+
+</div>
+</div>
+</div>
+</div>

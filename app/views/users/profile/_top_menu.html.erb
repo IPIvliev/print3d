@@ -1,0 +1,9 @@
+<!-- Content navigation -->
+<div class="panel-heading pb-0">
+  <ul class="nav nav-tabs">
+    <li><%= link_to "Профайл", user_path(current_user) %></li>
+    <li><%= link_to "Изменить профайл", edit_user_path(current_user) %></li>
+    <li><%= link_to "Безлимитный доступ", billing_user_path(current_user) %></li>
+  </ul>
+</div>
+<!-- Content navigation -->
